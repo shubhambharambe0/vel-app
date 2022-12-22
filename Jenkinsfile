@@ -1,8 +1,8 @@
 pipeline {
 agent{
 node{
-				label "slave-1"
-				customWorkspace "/mnt/jenkin-slave1/hubserver"
+				label "172.31.43.225"
+				customWorkspace "/mnt/jenkin-slave1"
 }
 }
 
