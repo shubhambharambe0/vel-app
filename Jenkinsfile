@@ -1,6 +1,6 @@
 pipeline {
 agent{
-label{
+node{
 				label "slave-1"
 				customWorkspace "/mnt/jenkin-slave1"
 }
