@@ -9,13 +9,6 @@ label{
 stages {
 
 		stage ("deploy-1"){
-			agent {
-		
-				label "slave-1"
-				customWorkspace "/mnt/jenkin-slave1"
-		
-		
-		}
 			steps {
 				        sh "yum install httpd -y"
 					sh "cp -r index.html /var/www/html/"
