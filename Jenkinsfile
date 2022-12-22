@@ -18,12 +18,6 @@ stages {
 		}
 		
 		stage ("start"){
-			agent {
-		
-				label "slave-1"
-				customWorkspace "/mnt/jenkin-slave1"
-		
-		}
 		steps {
 				sh "service httpd start"
 		
