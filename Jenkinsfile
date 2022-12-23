@@ -10,15 +10,15 @@ stages {
 
 		stage ("deploy-1"){
 			steps {
-				        sh "yum install httpd -y"
-					sh "cp index.html /var/www/html/index.html"
-				        sh "chmod -R 777 /var/www/html/index.html"
+				        sh "yum install httpd -y"		
 			}
 		
 		}
 		
 		stage ("start"){
-		steps {
+		        steps {
+			        sh "cp -r /mnt/myproject/index.html /var/www/html/index.html"
+				sh "chmod -R 777 /var/www/html/index.html"
 				sh "service httpd start"
 		
 		}
